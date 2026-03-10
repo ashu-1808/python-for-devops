@@ -95,7 +95,9 @@ for i in range(1, 11):
     print(f"{num} x {i} = {num * i}")
 ```
 
-The **f-string (`f""`)** lets you insert variables directly inside the string using `{ }`, which makes the output cleaner and easier to read.
+
+**f-string:** A string formatting method in Python that allows you to **put variables or expressions inside a string using `{}` by adding `f` before the string.**
+
 ---
 
 **While Loop:** A loop that **repeats a block of code as long as a specified condition is true**.
