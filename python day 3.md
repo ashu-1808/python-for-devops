@@ -102,12 +102,58 @@ for i in range(1, 11):
 
 **While Loop:** A loop that **repeats a block of code as long as a specified condition is true**.
 
+Here are **some common `while` loop practice examples**.
+
+**1. Print even numbers (1–10)**
+
 ```python
 i = 1
 
-while i <= 3:
-    print(i)
+while i <= 10:
+    if i % 2 == 0:
+        print(i)
     i += 1
+```
+
+**2. Factorial of a number**
+
+```python
+num = 5
+fact = 1
+i = 1
+
+while i <= num:
+    fact *= i
+    i += 1
+
+print(fact)
+```
+
+**3. Reverse a number**
+
+```python
+num = 123
+rev = 0
+
+while num > 0:
+    digit = num % 10
+    rev = rev * 10 + digit
+    num //= 10
+
+print(rev)
+```
+
+**4. Sum of digits**
+
+```python
+num = 123
+total = 0
+
+while num > 0:
+    total += num % 10
+    num //= 10
+
+print(total)
 ```
 
 ### 3. Control Statements (Loop Control)
