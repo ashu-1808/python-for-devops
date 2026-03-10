@@ -86,7 +86,17 @@ for i in range(1, 11):
 This program asks the user to **enter a number** and prints its **multiplication table from 1 to 10**.
 
 ---
+Here’s the **multiplication table using an f-string**:
 
+```python
+num = 5
+
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+```
+
+The **f-string (`f""`)** lets you insert variables directly inside the string using `{ }`, which makes the output cleaner and easier to read.
+---
 
 **While Loop:** A loop that **repeats a block of code as long as a specified condition is true**.
 
