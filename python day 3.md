@@ -59,7 +59,8 @@ else:
 
 ### 2. Looping Statements (Repetition)
 
-Loops execute code **multiple times**.
+A **loop** is a control structure used to **repeat a block of code multiple times until a condition is met or for a specific number of iterations**.
+
 
 **For Loop**
 
