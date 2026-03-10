@@ -26,7 +26,7 @@ Types:
 Example:
 
 ```python
-marks = 75
+marks = int(input("Enter your marks: "))
 
 if marks >= 90:
     print("Grade A+")
