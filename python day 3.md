@@ -29,11 +29,19 @@ Example:
 marks = 75
 
 if marks >= 90:
+    print("Grade A+")
+elif marks >= 80:
     print("Grade A")
-elif marks >= 60:
+elif marks >= 70:
     print("Grade B")
-else:
+elif marks >= 60:
     print("Grade C")
+elif marks >= 50:
+    print("Grade D")
+elif marks >= 40:
+    print("Grade E")
+else:
+    print("Fail")
 ```
 
 ### 2. Looping Statements (Repetition)
