@@ -64,13 +64,28 @@ A **loop** is a control structure used to **repeat a block of code multiple time
 
 
 **For Loop:** A loop used to **iterate over a sequence (list, range, string, etc.) and execute code a fixed number of times**.
+---
+```python
+fruits = ["apple", "banana", "mango", "orange"]
 
+for fruit in fruits:
+    print(fruit)
+```
 
+This loop goes through each item in the `fruits` list and prints the fruit name.
+---
+Example of a **multiplication table using a `for` loop**:
 
 ```python
-for i in range(5):
-    print(i)
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
 ```
+
+This program asks the user to **enter a number** and prints its **multiplication table from 1 to 10**.
+
+---
 
 
 **While Loop:** A loop that **repeats a block of code as long as a specified condition is true**.
