@@ -7,6 +7,8 @@ Python is a high-level, interpreted programming language used to write software,
 It was created by Guido van Rossum and first released in 1991.
 
 What makes Python popular is that the syntax is very simple and close to normal English, so it’s easier to learn compared to many other languages.
+
+
 ---
 
 ## 📌 Objectives
