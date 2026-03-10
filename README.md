@@ -19,7 +19,7 @@ What makes Python popular is that the syntax is very simple and close to normal 
 * Prepare Python skills for **DevOps and cloud environments**
 
 ---
-Here’s a **short version of Python features with simple examples**:
+**Python features **
 
 **1. Easy to Learn** – Python syntax is simple and readable.
 Example:
@@ -80,6 +80,22 @@ import os
 os.system("ls")
 ```
 
+---
+IDE:
+An IDE (Integrated Development Environment) in Python is a software tool that helps you write, run, test, and debug Python code in one place.
+Common Python IDEs:
+
+PyCharm – very powerful for professional development
+
+Visual Studio Code (VS Code) – lightweight and popular
+
+Jupyter Notebook – used for data science
+
+Spyder – used for scientific computing
+
+IDLE – default IDE that comes with Python
+
+For someone learning Python or using it with DevOps tools (automation, scripts, cloud), many developers prefer VS Code or PyCharm because they integrate well with Git, Docker, and terminals.
 ---
 
 ## 🧠 Topics Covered
