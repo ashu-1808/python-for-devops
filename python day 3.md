@@ -4,7 +4,8 @@ There are three main types.
 
 ### 1. Conditional Statements (Decision Making)
 
-These execute code **based on a condition**.
+A **conditional statement** is a programming structure used to **execute different blocks of code based on whether a condition is true or false**.
+
 
 **Example**
 
