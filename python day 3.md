@@ -19,9 +19,9 @@ else:
 
 Types:
 
-* `if`
-* `if-else`
-* `if-elif-else`
+1. if – Executes a block of code when a condition is true.
+2. elif – Checks another condition if the previous condition is false.
+3. else – Executes a block of code when all conditions are false.
 
 Example:
 
