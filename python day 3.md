@@ -16,6 +16,19 @@ if age >= 18:
 else:
     print("Minor")
 ```
+To ask the user to **enter their age**, use the `input()` function and convert it to an integer:
+
+```python
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+```
+
+The program will display **“Enter your age:”**, wait for the user to type a number, and then print **Adult** or **Minor** based on the entered age.
+
 
 Types:
 
