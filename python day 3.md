@@ -63,14 +63,17 @@ else:
 A **loop** is a control structure used to **repeat a block of code multiple times until a condition is met or for a specific number of iterations**.
 
 
-**For Loop**
+**For Loop:** A loop used to **iterate over a sequence (list, range, string, etc.) and execute code a fixed number of times**.
+
+
 
 ```python
 for i in range(5):
     print(i)
 ```
 
-**While Loop**
+
+**While Loop:** A loop that **repeats a block of code as long as a specified condition is true**.
 
 ```python
 i = 1
