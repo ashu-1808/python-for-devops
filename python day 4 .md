@@ -1,3 +1,45 @@
+Here are **simple DevOps-style `for` loop examples**.
+
+**1. Check multiple servers**
+
+```python
+servers = ["server1", "server2", "server3"]
+
+for server in servers:
+    print(f"Checking {server}")
+```
+
+**2. Deploy application to multiple environments**
+
+```python
+environments = ["dev", "test", "prod"]
+
+for env in environments:
+    print(f"Deploying to {env}")
+```
+
+**3. Restart multiple services**
+
+```python
+services = ["nginx", "docker", "jenkins"]
+
+for service in services:
+    print(f"Restarting {service}")
+```
+
+**4. Check status of containers**
+
+```python
+containers = ["web", "db", "cache"]
+
+for container in containers:
+    print(f"Checking {container} container")
+```
+
+These are **common DevOps automation patterns** where a `for` loop runs tasks on **multiple servers, services, or environments**.
+
+
+
 Here are a few **simple DevOps-style examples where a `while` loop could be used**.
 
 **1. Check if a server is running**
