@@ -6,7 +6,7 @@
 
 
 ---
-**Math Module in Python**
+**1.Math Module in Python**
 
 * The **math module** is a built-in Python module that provides **mathematical functions**.
 * It helps perform operations like **square root, power, factorial, trigonometry, and constants like π**.
@@ -78,7 +78,7 @@ The result is 8.0
 * Use a module → store output in **`result` variable** → print or use it later.
 
 ---
-**`datetime` Module in Python**
+**2.`datetime` Module in Python**
 
 * The **`datetime` module** is used to **work with dates and times**.
 * It allows you to **create, manipulate, and format date and time values**.
@@ -127,3 +127,45 @@ import datetime
 d = datetime.date(2025, 3, 12)
 print("Date:", d)
 ```
+---
+**3.OS Module in Python**
+
+* The **`os` module** is used to **interact with the operating system**.
+* It helps perform tasks like **working with files, directories, environment variables, and system commands**.
+
+**Import module**
+
+```python
+import os
+```
+
+**Common Functions**
+
+| Function       | Description                   |
+| -------------- | ----------------------------- |
+| `os.getcwd()`  | Get current working directory |
+| `os.listdir()` | List files in a directory     |
+| `os.mkdir()`   | Create a new directory        |
+| `os.remove()`  | Delete a file                 |
+| `os.rename()`  | Rename a file                 |
+
+**Example 1**
+
+```python
+import os
+
+print(os.getcwd())
+```
+
+**Example 2**
+
+```python
+import os
+
+files = os.listdir()
+print(files)
+```
+
+**Simple definition:**
+The **OS module** allows Python programs to **interact with the operating system and manage files or directories**.
+---
