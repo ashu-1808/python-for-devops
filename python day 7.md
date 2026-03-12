@@ -169,3 +169,114 @@ print(files)
 **Simple definition:**
 The **OS module** allows Python programs to **interact with the operating system and manage files or directories**.
 ---
+
+**4.`sys` Module in Python**
+
+* The **`sys` module** provides access to **Python interpreter and system-specific parameters**.
+* It helps interact with the **runtime environment and command-line arguments**.
+
+**Import**
+
+```python
+import sys
+```
+
+**Common Uses**
+
+| Function      | Description                    |
+| ------------- | ------------------------------ |
+| `sys.argv`    | Get command-line arguments     |
+| `sys.exit()`  | Exit the program               |
+| `sys.path`    | Show Python module search path |
+| `sys.version` | Show Python version            |
+
+**Example 1: Python version**
+
+```python
+import sys
+print(sys.version)
+```
+
+**Example 2: Command-line arguments**
+
+```python
+import sys
+print(sys.argv)
+```
+
+**Simple definition:**
+The **`sys` module** allows Python programs to **interact with the interpreter and system environment**.
+---
+**5.Paramiko in Python**
+
+* **Paramiko** is a Python library used to **connect to remote servers using SSH**.
+* It allows you to **execute commands, transfer files, and automate server tasks**.
+* Commonly used in **DevOps and automation**.
+
+**Install Paramiko**
+
+```bash
+pip install paramiko
+```
+
+**Example: Connect to a server**
+
+```python
+import paramiko
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+ssh.connect(hostname="192.168.1.10", username="user", password="password")
+
+stdin, stdout, stderr = ssh.exec_command("ls")
+
+print(stdout.read().decode())
+
+ssh.close()
+```
+
+**Simple definition:**
+**Paramiko** is a Python library used to **connect to remote servers via SSH and run commands remotely**.
+---
+**6.`subprocess` Module in Python**
+
+* The **`subprocess` module** is used to **run system commands from a Python program**.
+* It allows Python to **execute shell commands, scripts, or external programs**.
+* Commonly used in **DevOps automation**.
+
+**Import**
+
+```python
+import subprocess
+```
+
+**Example 1: Run a command**
+
+```python
+import subprocess
+
+subprocess.run(["ls"])
+```
+
+This runs the **`ls` command** to list files.
+
+**Example 2: Capture command output**
+
+```python
+import subprocess
+
+result = subprocess.run(["echo", "Hello DevOps"], capture_output=True, text=True)
+
+print(result.stdout)
+```
+
+Output:
+
+```
+Hello DevOps
+```
+
+**Simple definition:**
+The **`subprocess` module** allows Python to **execute system commands and interact with the operating system shell**.
+
