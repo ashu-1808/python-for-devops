@@ -16,7 +16,7 @@ def function_name(parameters):
 
 ```python
 def greet():
-    print("Hello")
+    print("Hello...! Welcome to the Python Session")
 ```
 ---
 **Calling a function** means **executing the function by writing its name followed by parentheses `()`**.
@@ -31,7 +31,7 @@ function_name()
 
 ```python
 def greet():
-    print("Hello")
+    print("Hello...! Welcome to the Python Session")
 
 greet()
 ```
