@@ -30,8 +30,8 @@ The result is 5.0
 
 
 **Simple definition:**
-A **module** is a **Python file that contains functions, variables, or classes that can be reused in other programs**.
+* A **module** is a **Python file that contains functions, variables, or classes that can be reused in other programs**.
 
-Use a module → store output in **`result` variable** → print or use it later.
+* Use a module → store output in **`result` variable** → print or use it later.
 
 ---
