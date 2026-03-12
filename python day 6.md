@@ -154,4 +154,72 @@ Explanation:
 
 **Simple definition:**
 **Argument passing** is the process of **providing values to a function when it is called.**
+---
+---
+Here is a **simple example combining variable, function, loop, and class** in Python.
 
+```python
+class Student:
+
+    def __init__(self, name):
+        self.name = name   # variable
+
+    def greet(self):       # function
+        print(f"Hello {self.name}")
+
+names = ["Ashu", "Yogesh", "Amit", "Kiran"]   # variable (list)
+
+for n in names:            # loop
+    s = Student(n)         # class object
+    s.greet()              # function call
+```
+
+**What this example uses:**
+
+* **Variable** → `names`, `self.name`
+* **Function** → `greet()`
+* **Loop** → `for n in names`
+* **Class** → `Student`
+
+**Output**
+
+```
+Hello Ashu
+Hello Yogesh
+Hello Amit
+Hello Kiran
+```
+Here is a **different example combining class, function, loop, and variables**.
+
+```python
+class Calculator:
+
+    def square(self, num):      # function
+        result = num * num      # variable
+        print(f"Square of {num} is {result}")
+
+numbers = [2, 3, 4, 5]          # variable (list)
+
+calc = Calculator()             # class object
+
+for n in numbers:               # loop
+    calc.square(n)              # function call
+```
+
+**Concepts used**
+
+* **Class** → `Calculator`
+* **Function** → `square()`
+* **Variable** → `numbers`, `result`
+* **Loop** → `for n in numbers`
+
+**Output**
+
+```
+Square of 2 is 4
+Square of 3 is 9
+Square of 4 is 16
+Square of 5 is 25
+```
+
+---
