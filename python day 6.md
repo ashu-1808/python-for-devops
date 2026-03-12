@@ -113,3 +113,45 @@ Output:
 ```
 The square of 5 is 25
 ```
+---
+A **global variable** is a variable **defined outside a function and can be accessed anywhere in the program**.
+
+Example:
+
+```python
+name = "Ashu"   # global variable
+
+def greet():
+    print(name)
+
+greet()
+```
+
+Explanation:
+
+* `name` is defined **outside the function**
+* It can be used **inside the function**
+
+**Simple definition:**
+A **global variable** is a variable **declared outside a function and accessible throughout the program.**
+---
+**Argument passing** means **sending values (arguments) to a function when calling it**.
+
+Example:
+
+```python
+def greet(name):
+    print(f"Hello {name}")
+
+greet("Ashu")
+greet("Yogesh")
+```
+
+Explanation:
+
+* `name` → parameter (in function definition)
+* `"Ashu"` and `"Yogesh"` → arguments (values passed to the function)
+
+**Simple definition:**
+**Argument passing** is the process of **providing values to a function when it is called.**
+
