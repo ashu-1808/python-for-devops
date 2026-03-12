@@ -90,3 +90,26 @@ Explanation:
 
 **Simple definition:**
 A **return value** is the **result a function gives back using `return`.**
+
+
+Here is a simple **square example using a return value**:
+
+```python
+def square(num):
+    return num * num
+
+result = square(5)
+print(f"The square of 5 is {result}")
+```
+
+**Explanation**
+
+* `num` → parameter
+* `return num * num` → returns the square
+* `result` → stores the returned value
+
+Output:
+
+```
+The square of 5 is 25
+```
