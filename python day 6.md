@@ -36,7 +36,7 @@ def greet():
 greet()
 ```
 ---
-## Arguments are the values passed to a function when calling it.
+Argument passing means sending values (arguments) to a function when calling it.
 example1
 
 ```python
