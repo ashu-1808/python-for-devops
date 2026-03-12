@@ -36,3 +36,37 @@ def greet():
 greet()
 ```
 ---
+Arguments are the values passed to a function when calling it.
+example1
+
+```python
+def add(a, b):
+    print(f"The sum of {a} and {b} is {a + b}")
+
+add(5, 3)
+add(10, 20)
+```
+
+Output:
+
+```
+The sum of 5 and 3 is 8
+The sum of 10 and 20 is 30
+```
+example2
+
+```python
+def add(a, b):
+    print(f"The sum of {a} and {b} is {a + b}")
+
+add(5, 3)
+add(10, 20)
+```
+
+Output:
+
+```
+The sum of 5 and 3 is 8
+The sum of 10 and 20 is 30
+```
+---
