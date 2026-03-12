@@ -36,7 +36,7 @@ def greet():
 greet()
 ```
 ---
-Arguments are the values passed to a function when calling it.
+## Arguments are the values passed to a function when calling it.
 example1
 
 ```python
@@ -70,3 +70,23 @@ The sum of 5 and 3 is 8
 The sum of 10 and 20 is 30
 ```
 ---
+**Return value** is the **value that a function sends back to the place where it was called** using the `return` keyword.
+
+Example using your function style:
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(f"The sum of 5 and 3 is {result}")
+```
+
+Explanation:
+
+* `return a + b` → sends the result back
+* `result` → stores the returned value
+* Then we print it.
+
+**Simple definition:**
+A **return value** is the **result a function gives back using `return`.**
