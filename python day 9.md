@@ -166,4 +166,145 @@ NumPy is used **more in data science**, but in DevOps it helps with **metrics an
 ---
 
 
+# 3.file handling in devops
+**1. Reading a server log file**
+
+Engineers often scan logs to debug issues or monitor errors.
+
+```python
+with open("server.log", "r") as f:
+    for line in f:
+        print(line.strip())
+```
+
+This reads the log line-by-line so even large files don’t consume too much memory.
+
+**2. Extracting errors from logs**
+
+You might filter only lines containing “ERROR”.
+
+```python
+with open("server.log", "r") as f:
+    for line in f:
+        if "ERROR" in line:
+            print(line)
+```
+
+Useful for quick troubleshooting during incidents.
+
+**3. Writing a deployment report**
+
+After a CI/CD pipeline finishes, a script might write a report.
+
+```python
+with open("deployment_report.txt", "w") as f:
+    f.write("Deployment Successful\n")
+    f.write("Version: v1.2.0\n")
+```
+
+This creates or overwrites a file with deployment details.
+
+**4. Appending monitoring data**
+
+Sometimes scripts continuously add system metrics to a file.
+
+```python
+with open("metrics.log", "a") as f:
+    f.write("CPU Usage: 60%\n")
+```
+
+The `a` mode ensures previous data is preserved.
+
+**5. Reading a configuration file**
+
+Automation scripts often read environment settings.
+
+```python
+with open("config.txt", "r") as f:
+    config = f.read()
+print(config)
+```
+
+This could contain database URLs, API keys, or service settings.
+
+**6. Updating a configuration value**
+
+A deployment script might change a version number or environment variable.
+
+```python
+with open("config.txt", "r") as f:
+    data = f.read()
+
+data = data.replace("VERSION=1.0", "VERSION=1.1")
+
+with open("config.txt", "w") as f:
+    f.write(data)
+```
+
+Common during automated releases.
+
+**7. Processing a list of servers**
+
+You might store server IPs in a file and loop through them.
+
+```python
+with open("servers.txt", "r") as f:
+    servers = f.readlines()
+
+for server in servers:
+    print("Connecting to:", server.strip())
+```
+
+This pattern is often combined with SSH libraries.
+
+**8. Saving API responses**
+
+If a script calls a monitoring API, it may store results locally.
+
+```python
+import json
+
+data = {"cpu": 55, "memory": 70}
+
+with open("metrics.json", "w") as f:
+    json.dump(data, f)
+```
+
+Useful for debugging or archiving metrics.
+
+**9. Reading JSON configuration**
+
+Many DevOps tools use JSON or YAML configuration files.
+
+```python
+import json
+
+with open("settings.json", "r") as f:
+    config = json.load(f)
+
+print(config["environment"])
+```
+
+This allows scripts to dynamically adapt to environments.
+
+**10. Generating automated backup logs**
+
+Backup scripts often record what was backed up.
+
+```python
+from datetime import datetime
+
+with open("backup.log", "a") as f:
+    f.write(f"Backup completed at {datetime.now()}\n")
+```
+
+This helps maintain an audit trail.
+
+---
+
+If you're preparing for DevOps interviews, a good one-line summary is:
+
+**“Python file handling is widely used in DevOps for reading logs, managing configuration files, generating reports, and storing automation results.”**
+
+If you’d like, I can also show **5 small DevOps Python automation scripts** (like a log analyzer, config updater, and server health checker) that combine file handling with real DevOps tasks.
 
