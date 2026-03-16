@@ -102,7 +102,7 @@ A short **interview definition** you can remember:
 
 “Matplotlib is a Python library used for creating data visualizations such as line graphs, bar charts, and pie charts.”
 
-#2.NumPy
+# 2.NumPy
 **** (short for **Numerical Python**) is a Python library used for **fast numerical and mathematical operations**, especially with arrays and matrices. It’s a foundation for many data science and scientific computing tools.
 
 A simple way to think about it: NumPy gives Python a powerful **array object** and a large set of **vectorized math functions** that run much faster than regular Python loops.
