@@ -1,7 +1,7 @@
 # Python Library
 A Python library is a collection of prewritten code (modules and functions) that developers use to perform common tasks without writing the code from scratch.
 
-# 1.Matplotlib
+## 1.Matplotlib
 **Matplotlib** is a popular Python library used to create **graphs and visualizations** from data. It helps turn numbers into charts like line graphs, bar charts, pie charts, and histograms.
 
 In simple terms:
@@ -102,7 +102,7 @@ A short **interview definition** you can remember:
 
 “Matplotlib is a Python library used for creating data visualizations such as line graphs, bar charts, and pie charts.”
 
-# 2.NumPy
+## 2.NumPy
 **NumPy** (short for **Numerical Python**) is a Python library used for **fast numerical and mathematical operations**, especially with arrays and matrices. It’s a foundation for many data science and scientific computing tools.
 
 A simple way to think about it: NumPy gives Python a powerful **array object** and a large set of **vectorized math functions** that run much faster than regular Python loops.
@@ -180,6 +180,88 @@ Output:
 
 One useful thing to remember:
 Many libraries like **Pandas, SciPy, TensorFlow, and Matplotlib** internally use NumPy arrays.
+
+
+# File handling in Python
+
+**** means **creating, opening, reading, writing, and closing files** using Python code. It allows programs to store data permanently instead of keeping it only in memory.
+
+A short interview definition:
+**“File handling in Python is the process of reading, writing, and managing files using built-in functions like `open()`.”**
+
+The basic syntax looks like this:
+
+```python
+file = open("filename.txt", "mode")
+```
+
+The **mode** tells Python what you want to do with the file.
+
+| Mode | Meaning                |
+| ---- | ---------------------- |
+| `r`  | Read file              |
+| `w`  | Write file (overwrite) |
+| `a`  | Append data            |
+| `x`  | Create new file        |
+| `b`  | Binary mode            |
+| `t`  | Text mode (default)    |
+
+Example: **Reading a file**
+
+```python
+file = open("data.txt", "r")
+content = file.read()
+print(content)
+file.close()
+```
+
+Example: **Writing to a file**
+
+```python
+file = open("data.txt", "w")
+file.write("Hello Python")
+file.close()
+```
+
+Example: **Appending data**
+
+```python
+file = open("data.txt", "a")
+file.write("\nWelcome to file handling")
+file.close()
+```
+
+A better and safer way is using **`with open()`**, which automatically closes the file:
+
+```python
+with open("data.txt", "r") as file:
+    print(file.read())
+```
+
+Common file methods you should know:
+
+| Method        | Purpose          |
+| ------------- | ---------------- |
+| `read()`      | Read entire file |
+| `readline()`  | Read one line    |
+| `readlines()` | Read all lines   |
+| `write()`     | Write text       |
+| `close()`     | Close the file   |
+
+In **DevOps / automation**, file handling is often used for:
+
+* Reading **configuration files**
+* Processing **log files**
+* Updating **deployment scripts**
+* Handling **JSON/YAML configs**
+
+Example (reading a log file):
+
+```python
+with open("server.log", "r") as file:
+    for line in file:
+        print(line)
+```
 
 
 
