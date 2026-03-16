@@ -104,7 +104,7 @@ A tip from real interviews: after explaining try–except, many interviewers fol
 
 
 ---
-Here are **10 practical DevOps-style error-handling examples using `try–except`** in Python. These show how automation scripts avoid crashing when something fails.
+Here are ** practical DevOps-style error-handling examples using `try–except`** in Python. These show how automation scripts avoid crashing when something fails.
 
 ---
 
