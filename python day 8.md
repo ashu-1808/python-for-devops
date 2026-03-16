@@ -1,7 +1,7 @@
 # Python Library
 A Python library is a collection of prewritten code (modules and functions) that developers use to perform common tasks without writing the code from scratch.
 
-1.Matplotlib
+# 1.Matplotlib
 **Matplotlib** is a popular Python library used to create **graphs and visualizations** from data. It helps turn numbers into charts like line graphs, bar charts, pie charts, and histograms.
 
 In simple terms:
