@@ -240,10 +240,260 @@ Use case: CI/CD pipeline reporting.
 
 ---
 
-If you want, I can also show you **5 advanced DevOps CSV scripts used in real companies**, such as:
+Good—let’s step up a level. These are **more realistic DevOps-style scripts** where CSV becomes a small control plane: you keep infrastructure data in a spreadsheet-friendly file and your Python automation consumes it.
 
-* AWS EC2 inventory automation
-* Kubernetes node report generator
-* Jenkins build report parser
-* Log analyzer for production servers
-* Auto patching script for multiple servers.
+---
+
+### 1. AWS EC2 Inventory → CSV Report
+
+Using **boto3** to export EC2 instances.
+
+```python
+import boto3
+import csv
+
+ec2 = boto3.client('ec2', region_name='ap-south-1')
+
+response = ec2.describe_instances()
+
+with open("ec2_inventory.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["InstanceID", "InstanceType", "State"])
+
+    for reservation in response["Reservations"]:
+        for instance in reservation["Instances"]:
+            writer.writerow([
+                instance["InstanceId"],
+                instance["InstanceType"],
+                instance["State"]["Name"]
+            ])
+```
+
+Typical use:
+DevOps teams export **EC2 inventory reports** for auditing or capacity planning.
+
+---
+
+### 2. Kubernetes Node Report → CSV
+
+Using **Kubernetes** via `kubectl`.
+
+```python
+import csv
+import subprocess
+
+nodes = subprocess.check_output(
+    ["kubectl", "get", "nodes", "-o", "wide"]
+).decode().splitlines()
+
+with open("k8s_nodes.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+
+    for line in nodes:
+        writer.writerow(line.split())
+```
+
+Use case:
+Export **cluster node information** for monitoring or audits.
+
+---
+
+### 3. Jenkins Build Result → CSV Report
+
+Using **Jenkins** API.
+
+```python
+import requests
+import csv
+
+url = "http://jenkins-server/job/myjob/api/json"
+data = requests.get(url).json()
+
+with open("jenkins_builds.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Build Number", "Result"])
+
+    for build in data["builds"]:
+        writer.writerow([build["number"], build.get("result")])
+```
+
+Use case:
+CI/CD pipeline reporting.
+
+---
+
+### 4. Log Analyzer → Error Report
+
+Parse application logs and export errors.
+
+```python
+import csv
+
+logfile = "app.log"
+
+with open(logfile) as f:
+    lines = f.readlines()
+
+with open("error_report.csv", "w", newline="") as out:
+    writer = csv.writer(out)
+    writer.writerow(["Error"])
+
+    for line in lines:
+        if "ERROR" in line:
+            writer.writerow([line.strip()])
+```
+
+Use case:
+Quick **production log analysis**.
+
+---
+
+### 5. Server Patch Automation (Using CSV)
+
+CSV file:
+
+```
+server,ip
+web01,192.168.1.10
+web02,192.168.1.11
+```
+
+Python automation using **paramiko**:
+
+```python
+import csv
+import paramiko
+
+with open("servers.csv") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        ssh = paramiko.SSHClient()
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+        ssh.connect(row["ip"], username="ubuntu", password="password")
+
+        ssh.exec_command("sudo apt update && sudo apt upgrade -y")
+
+        print("Patched:", row["server"])
+        ssh.close()
+```
+
+Use case:
+Automate **patching multiple servers**.
+
+---
+
+### 6. Docker Container Report
+
+Export container list from **Docker**.
+
+```python
+import subprocess
+import csv
+
+containers = subprocess.check_output(
+    ["docker", "ps", "--format", "{{.Names}},{{.Status}}"]
+).decode().splitlines()
+
+with open("docker_report.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Container", "Status"])
+
+    for c in containers:
+        writer.writerow(c.split(","))
+```
+
+Use case:
+Daily **container health report**.
+
+---
+
+### 7. Disk Usage Monitoring Report
+
+```python
+import subprocess
+import csv
+
+result = subprocess.check_output(["df", "-h"]).decode().splitlines()
+
+with open("disk_usage.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+
+    for line in result:
+        writer.writerow(line.split())
+```
+
+Use case:
+Export **Linux disk usage reports**.
+
+---
+
+### 8. Bulk DNS Record Generator
+
+Generate DNS records for **Amazon Route 53**.
+
+```python
+import csv
+
+with open("dns_records.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Domain", "IP"])
+
+    writer.writerow(["app.company.com", "192.168.1.10"])
+    writer.writerow(["db.company.com", "192.168.1.20"])
+```
+
+Use case:
+Prepare DNS bulk upload.
+
+---
+
+### 9. Kubernetes Pod Status Report
+
+```python
+import subprocess
+import csv
+
+pods = subprocess.check_output(
+    ["kubectl", "get", "pods"]
+).decode().splitlines()
+
+with open("pods_report.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+
+    for p in pods:
+        writer.writerow(p.split())
+```
+
+Use case:
+Track **pod health in Kubernetes clusters**.
+
+---
+
+### 10. Failed Login Detection Report
+
+```python
+import csv
+
+logfile = "/var/log/auth.log"
+
+with open(logfile) as f:
+    logs = f.readlines()
+
+with open("failed_logins.csv", "w", newline="") as out:
+    writer = csv.writer(out)
+    writer.writerow(["Failed Login"])
+
+    for line in logs:
+        if "Failed password" in line:
+            writer.writerow([line.strip()])
+```
+
+Use case:
+Security monitoring for Linux servers.
+
+---
+
+
+
