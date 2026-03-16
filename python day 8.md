@@ -197,14 +197,27 @@ file = open("filename.txt", "mode")
 
 The **mode** tells Python what you want to do with the file.
 
-| Mode | Meaning                |
-| ---- | ---------------------- |
-| `r`  | Read file              |
-| `w`  | Write file (overwrite) |
-| `a`  | Append data            |
-| `x`  | Create new file        |
-| `b`  | Binary mode            |
-| `t`  | Text mode (default)    |
+| Mode | Meaning     | Description                                                                            |
+| ---- | ----------- | -------------------------------------------------------------------------------------- |
+| `r`  | Read        | Opens a file for reading. Error if file does not exist.                                |
+| `w`  | Write       | Opens file for writing. Overwrites existing content. Creates file if it doesn't exist. |
+| `a`  | Append      | Adds new data at the end of the file. Creates file if it doesn't exist.                |
+| `x`  | Create      | Creates a new file. Gives error if file already exists.                                |
+| `b`  | Binary mode | Used for binary files like images, videos, PDFs.                                       |
+| `t`  | Text mode   | Used for text files (default mode).                                                    |
+|
+
+
+Common Mode Combinations
+| Mode | Meaning                                   |
+| ---- | ----------------------------------------- |
+| `r+` | Read and write file                       |
+| `w+` | Write and read (overwrites existing data) |
+| `a+` | Append and read                           |
+| `rb` | Read binary file                          |
+| `wb` | Write binary file                         |
+| `ab` | Append binary file                        |
+
 
 Example: **Reading a file**
 
