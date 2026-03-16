@@ -1,5 +1,7 @@
 # Python Library
 A Python library is a collection of prewritten code (modules and functions) that developers use to perform common tasks without writing the code from scratch.
+
+1.Matplotlib
 **Matplotlib** is a popular Python library used to create **graphs and visualizations** from data. It helps turn numbers into charts like line graphs, bar charts, pie charts, and histograms.
 
 In simple terms:
@@ -100,4 +102,84 @@ A short **interview definition** you can remember:
 
 “Matplotlib is a Python library used for creating data visualizations such as line graphs, bar charts, and pie charts.”
 
-If you want, I can also show you **10 most used Matplotlib commands beginners should know** (very useful for Python interviews and practice).
+#2.NumPy
+**** (short for **Numerical Python**) is a Python library used for **fast numerical and mathematical operations**, especially with arrays and matrices. It’s a foundation for many data science and scientific computing tools.
+
+A simple way to think about it: NumPy gives Python a powerful **array object** and a large set of **vectorized math functions** that run much faster than regular Python loops.
+
+A short interview-style definition:
+“NumPy is a Python library used for numerical computing, providing support for arrays, matrices, and mathematical functions.”
+
+Here’s a small example.
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40])
+print(arr)
+```
+
+This creates a NumPy **array**.
+
+You can also perform operations on the whole array at once:
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr * 2)
+```
+
+Output:
+
+```
+[2 4 6 8]
+```
+
+NumPy automatically multiplies every element by 2.
+
+Another common example:
+
+```python
+import numpy as np
+
+arr = np.array([5, 10, 15])
+print(np.mean(arr))
+```
+
+Output:
+
+```
+10.0
+```
+
+Some commonly used NumPy functions:
+
+* `np.array()` → create an array
+* `np.mean()` → average
+* `np.sum()` → sum of elements
+* `np.max()` → maximum value
+* `np.min()` → minimum value
+* `np.zeros()` → array of zeros
+* `np.ones()` → array of ones
+
+Example:
+
+```python
+import numpy as np
+
+arr = np.zeros(5)
+print(arr)
+```
+
+Output:
+
+```
+[0. 0. 0. 0. 0.]
+```
+
+One useful thing to remember:
+Many libraries like **Pandas, SciPy, TensorFlow, and Matplotlib** internally use NumPy arrays.
+
+If you want, I can also show you **10 most important NumPy commands beginners must know** with simple examples.
+
